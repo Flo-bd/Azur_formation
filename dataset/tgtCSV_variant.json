@@ -1,5 +1,5 @@
 {
-	"name": "tgtCSV_Variant",
+	"name": "tgtCSV_variant",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
