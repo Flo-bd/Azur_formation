@@ -1,5 +1,5 @@
 {
-	"name": "srcCSV_site_prelevement",
+	"name": "tgtCSV_site_prelevement",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
