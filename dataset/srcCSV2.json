@@ -1,5 +1,5 @@
 {
-	"name": "CSV2",
+	"name": "srcCSV2",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "FileServer1",
