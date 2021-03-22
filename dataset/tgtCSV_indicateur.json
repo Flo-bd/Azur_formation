@@ -18,22 +18,28 @@
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
+			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": [
 			{
+				"name": "extract_date",
 				"type": "String"
 			},
 			{
+				"name": "tx_incid",
 				"type": "String"
 			},
 			{
+				"name": "R",
 				"type": "String"
 			},
 			{
+				"name": "taux_occupation_sae",
 				"type": "String"
 			},
 			{
+				"name": "tx_pos",
 				"type": "String"
 			}
 		]
