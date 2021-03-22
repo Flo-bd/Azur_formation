@@ -50,6 +50,27 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipelines": [],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Minute",
+						"interval": 3,
+						"startTime": "2021-03-22T14:46:00",
+						"endTime": "2021-03-22T16:46:00",
+						"timeZone": "Romance Standard Time"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/integrationRuntime1')]",
 			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
 			"apiVersion": "2018-06-01",
@@ -952,109 +973,6 @@
 					},
 					{
 						"name": "tx_pos",
-						"type": "String"
-					}
-				]
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/FileServer1')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/srcCSV_site_prelevement')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "FileServer1",
-					"type": "LinkedServiceReference"
-				},
-				"folder": {
-					"name": "src"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "FileServerLocation",
-						"fileName": "sites-prelevements-grand-public.csv"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": [
-					{
-						"name": "ID",
-						"type": "String"
-					},
-					{
-						"name": "id_ej",
-						"type": "String"
-					},
-					{
-						"name": "finess",
-						"type": "String"
-					},
-					{
-						"name": "rs",
-						"type": "String"
-					},
-					{
-						"name": "adresse",
-						"type": "String"
-					},
-					{
-						"name": "cpl_loc",
-						"type": "String"
-					},
-					{
-						"name": "do_prel",
-						"type": "String"
-					},
-					{
-						"name": "do_antigenic",
-						"type": "String"
-					},
-					{
-						"name": "longitude",
-						"type": "String"
-					},
-					{
-						"name": "latitude",
-						"type": "String"
-					},
-					{
-						"name": "mod_prel",
-						"type": "String"
-					},
-					{
-						"name": "public",
-						"type": "String"
-					},
-					{
-						"name": "horaire",
-						"type": "String"
-					},
-					{
-						"name": "horaire_prio",
-						"type": "String"
-					},
-					{
-						"name": "check_rdv",
-						"type": "String"
-					},
-					{
-						"name": "tel_rdv",
-						"type": "String"
-					},
-					{
-						"name": "web_rdv",
-						"type": "String"
-					},
-					{
-						"name": "date_modif",
 						"type": "String"
 					}
 				]
