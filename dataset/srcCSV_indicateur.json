@@ -1,0 +1,46 @@
+{
+	"name": "srcCSV_indicateur",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FileServer1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "src"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "table-indicateurs-open-data-france.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "extract_date",
+				"type": "String"
+			},
+			{
+				"name": "tx_incid",
+				"type": "String"
+			},
+			{
+				"name": "R",
+				"type": "String"
+			},
+			{
+				"name": "taux_occupation_sae",
+				"type": "String"
+			},
+			{
+				"name": "tx_pos",
+				"type": "String"
+			}
+		]
+	}
+}
