@@ -5,6 +5,9 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "tgt"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
