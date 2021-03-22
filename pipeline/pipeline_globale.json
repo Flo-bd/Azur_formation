@@ -1,0 +1,41 @@
+{
+	"name": "pipeline_globale",
+	"properties": {
+		"activities": [
+			{
+				"name": "CSV_extract",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "CSV_extract",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "newCSV",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "CSV_extract",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "newCSV",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}
