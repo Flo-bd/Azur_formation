@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "src"
+			"name": "tgt"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
